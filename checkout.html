@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <title>Formulario de pago</title>
+  <style media="screen">
+    .estado_ancho{
+      width: 200px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col py-5 text-center">
+        <h2>Formulario de pago</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ratione,
+          reiciendis rerum, consectetur adipisci hic ad illo aspernatur culpa, nesciunt
+          esse iste vero aperiam. Dignissimos vero ducimus, commodi et minus.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-8 order-2 order-md-1 ">
+        <h4 class="mb-3">Direccion de envio</h4>
+        <form action="">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-3">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control"id="nombre" name="nombre">
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-3">
+              <label for="apelido">Apellido</label>
+              <input type="text" class="form-control"id="apellido" name="apellido">
+            </div>
+
+          </div>
+          <div class="mb-3 col-lg-8">
+            <label for="usuario">Usuario</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input type="text" name="usuario" value="" id="usuario" class="form-control" placeholder="usuario">
+            </div>
+          </div>
+          <div class="mb-3 col-lg-8">
+            <label for="correo">Correo</label>
+            <input type="email" class="form-control" placeholder="nombre@correo.com" name="correo">
+          </div>
+          <div class="mb-3 col-lg-8">
+            <label for="direccion">Direccion</label>
+            <input type="text" class="form-control" placeholder="1234 calle pricipal" name="direccion">
+          </div>
+          <div class="mb-3 col-lg-8">
+            <label for="direccion2">Direccion 2</label>
+            <input type="text" class="form-control" placeholder="Informacion adicional" name="direccon2">
+          </div>
+
+          <div class="row">
+              <div class="col-lg-8 col-sm-4 mb-3">
+                  <label for="pais">Pais</label>
+                  <select name="pais" id="pais" class="custom-select d-block">
+                    <option value="">Seleccionar pais</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="españa">España</option>
+                    <option value="colombia">Colombia</option>
+                  </select>
+
+                  <div class="col-lg-8 col-sm-4 mb-3">
+                      <label for="estado">Estado</label>
+                      <select name="estado" id="estado" class="custom-select d-block estado_ancho">
+                        <option selected value="">Seleccionar estado</option>
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                      </select>
+                  </div>
+                  <div class="col-lg-8 col-sm-4 mb-3">
+                    <label for="codigo-postal">Código postal</label>
+                    <input type="text" id="codigo-postal" class="form-control estado_ancho" placeholder="Código postal">
+                  </div>
+              </div>
+          </div>
+
+          <br>
+
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="misma-direccion">
+          <label for="misma-direccion" class="custom-control-label">Enviar a la misma direccion de facturacion</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="guardar-informacion">
+          <label for="guardar-informacion" class="custom-control-label">Guardar informacion para la siguiente compra</label>
+          </div>
+
+          <br class="mb-4">
+
+          <div class="d-block mb-3">
+            <div class="custom-control custom-radio">
+              <input type="radio" name="metodo-pago" id="tarjeta-credito" class="custom-control-input" checked>
+              <label for="tarjeta-credito"class="custom-control-label">Tarjeta de credito</label>
+            </div>
+          </div>
+
+          <div class="d-block mb-3">
+            <div class="custom-control custom-radio">
+              <input type="radio" name="metodo-pago" id="tarjeta-debito" class="custom-control-input" checked>
+              <label for="tarjeta-debito"class="custom-control-label">Tarjeta de debito</label>
+            </div>
+          </div>
+
+          <div class="d-block mb-3">
+            <div class="custom-control custom-radio">
+              <input type="radio" name="metodo-pago" id="paypal" class="custom-control-input" checked>
+              <label for="paypal"class="custom-control-label">Paypal</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8 col-sm-6 mb-3">
+             <label for="nombre-tajeta">Nombre tarjeta</label>
+              <input type="text" name="" value="" id="nombre-tarjeta" class="form-control">
+              <small class="text-muted">Nombre completo como aparece en la tarjeta</small>
+            <br>
+              <label for="nombre-tajeta">Numero de  tarjeta</label>
+              <input type="text" name="" value="" id="numero-tarjeta" class="form-control">
+              <label for="tarjeta-expiracion">Expiracion</label>
+              <input type="text" name="" value=""id="tarjeta-expiracion" class="form-control">
+              <label for="csv">CSV</label>
+              <input type="text" name="" value=""id="csv" class="form-control">
+              <br>
+              <input type="submit" value="Continuar al pago" class="btn btn-block btn-lg btn-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-4 order-3">
+        <h4 class="mb-3 d-flex justify-content-between aling-item-center">
+          <span class="text-muted">Tu carrito</span>
+          <span class="badge badge-secondary badge-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h6 class="my-0">Nombre del producto</h6>
+              <small class="text-muted">Pequeña descripcion</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h6 class="my-0">Segundo producto</h6>
+              <small class="text-muted">Pequeña descripcion</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h6 class="my-0">Tercer producto</h6>
+              <small class="text-muted">Pequeña descripcion</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Descuento</h6>
+              <small class="text-muted">Pequeña descripcion</small>
+            </div>
+            <span class="text-success">$5</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between">
+          <span>Total (U$D)</span>
+          <strong>$20</strong>
+          </li>
+        </ul>
+        <form action="" class="card p-2">
+        <div class="input-group">
+          <input type="text" name="" value="" class="form-control" placeholder="cupon">
+          <div class="input-group-append">
+            <button type="button" name="button" class="btn btn-secondary">Canjear</button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <footer class="my-5 py-5 text-muted text-center text-small">
+      <p class="mb-1">
+        © Todos los derechos reservados - Nicolas Migliano
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Privacidad</a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="#">Terminos y condiciones</a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="#">Soporte</a>
+          </li>
+        </ul>
+      </p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+  integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>
